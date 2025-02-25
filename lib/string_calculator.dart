@@ -19,7 +19,6 @@ class StringCalculator {
     if (negatives.isNotEmpty) {
       throw Exception('negative numbers not allowed ${negatives.join(',')}');
     }
-
     return numberList.reduce((a, b) => a + b);
   }
 }
