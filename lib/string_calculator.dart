@@ -13,6 +13,13 @@ class StringCalculator {
     }
 
     final regex = RegExp(delimiters.map(RegExp.escape).join('|'));
-    return numberString.split(regex).map(int.parse).reduce((a, b) => a + b);
+    final numberList = numberString.split(regex).map(int.parse).toList();
+
+    final negatives = numberList.where((n) => n < 0).toList();
+    if (negatives.isNotEmpty) {
+      throw Exception('negative numbers not allowed ${negatives.join(',')}');
+    }
+
+    return numberList.reduce((a, b) => a + b);
   }
 }
