@@ -2,15 +2,18 @@
 
 A new Flutter project.
 
-## Getting Started
+ 
 
-This project is a starting point for a Flutter application.
+# String Calculator TDD Kata
 
-A few resources to get you started if this is your first Flutter project:
+This project implements a String Calculator using Test-Driven Development (TDD) in Dart.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Features
+- Supports addition of numbers from a string
+- Handles multiple delimiters (`,`, `\n`, custom delimiters)
+- Throws an error for negative numbers
+- Ignores numbers greater than 1000
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## How to Run
+```sh
+flutter test
